@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Dev Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <div class="card" id="card">
+
+      <!-- Login Form -->
+      <div class="form login-form">
+        <h2>Welcome Back</h2>
+        <p class="tagline">Frontend Developer Portal</p>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+        <p class="switch">Don't have an account? 
+          <span onclick="rotateCard()">Sign Up</span>
+        </p>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div class="form signup-form">
+        <h2>Create Account</h2>
+        <p class="tagline">Join as a Frontend Developer</p>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button>Sign Up</button>
+        <p class="switch">Already have an account? 
+          <span onclick="rotateCard()">Login</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
