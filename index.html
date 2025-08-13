@@ -16,9 +16,11 @@
       <div class="form login-form">
         <h2>Welcome Back</h2>
         <p class="tagline">Welcome to My World</p>
+         <form id="loginForm">
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Password" required>
         <button id="loginBtn">Login</button>
+          </form>
         <p class="switch">Don't have an account?
           <span onclick="rotateCard()">Sign Up</span>
         </p>
@@ -28,10 +30,12 @@
       <div class="form signup-form">
         <h2>Create Account</h2>
         <p class="tagline">Join as a My World</p>
+        <form id="signupForm">
         <input type="text" placeholder="Full Name" required>
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Password" required>
         <button id="signupBtn">Sign Up</button>
+        </form>
         <p class="switch">Already have an account? 
           <span onclick="rotateCard()">Login</span>
         </p>
@@ -40,17 +44,22 @@
   </div>
 
   <script>
-    // Show alert when login button is clicked
-    document.getElementById("loginBtn").addEventListener("click", function () {
-      alert("Registration successful!");
-    });
+     // Login button
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop form submission
+    alert("Login successful!");
+    this.reset(); // Clear form inputs
+  });
 
-    // Show alert when sign up button is clicked
-    document.getElementById("signupBtn").addEventListener("click", function () {
-      alert("Registration successful!");
-    });
+  // Sign Up button
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Registration successful!");
+    this.reset();
+  });
   </script>
 
   <script src="script.js"></script>
 </body>
 </html>
+
