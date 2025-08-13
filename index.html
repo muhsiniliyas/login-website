@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>muhsinilyas Login</title>
+  <title>Muhsiniliyas Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,11 @@
       <!-- Login Form -->
       <div class="form login-form">
         <h2>Welcome Back</h2>
-        <p class="tagline">Welcome To My World</p>
+        <p class="tagline">Welcome to My World</p>
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Password" required>
-        <button>Login</button>
-        <p class="switch">Don't have an account? 
+        <button id="loginBtn">Login</button>
+        <p class="switch">Don't have an account?
           <span onclick="rotateCard()">Sign Up</span>
         </p>
       </div>
@@ -31,7 +31,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Password" required>
-        <button>Sign Up</button>
+        <button id="signupBtn">Sign Up</button>
         <p class="switch">Already have an account? 
           <span onclick="rotateCard()">Login</span>
         </p>
@@ -39,8 +39,18 @@
     </div>
   </div>
 
+  <script>
+    // Show alert when login button is clicked
+    document.getElementById("loginBtn").addEventListener("click", function () {
+      alert("Registration successful!");
+    });
+
+    // Show alert when sign up button is clicked
+    document.getElementById("signupBtn").addEventListener("click", function () {
+      alert("Registration successful!");
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
-
-
